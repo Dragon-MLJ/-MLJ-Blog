@@ -1,0 +1,57 @@
+/* FPS */
+#page-header #nav #nav-left {
+    z-index: 102;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    margin-right: 1.5rem;
+    overflow: hidden;
+}
+
+.nav-fixed #fps-group,
+.not-top-img #fps-group {
+    color: var(--bieyinan-fontcolor);
+}
+
+#fps-group {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    color: var(--bieyinan-white);
+}
+
+#fps-group.show {
+    opacity: 1;
+    filter: none;
+}
+
+#fps {
+    z-index: 10000;
+    font-size: 12px;
+    transition: 0.3s;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.fpsText {
+    font-size: 12px;
+    line-height: 1;
+    opacity: 0.6;
+}
+
+/* 下面两个可以不复制 */
+@media screen and (max-width: 1400px) {
+    #fps-group.show {
+        opacity: 0;
+        filter: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #fps-group.show {
+        opacity: 1;
+        filter: none;
+    }
+}
